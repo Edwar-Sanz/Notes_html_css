@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+  </head>
+  <body>
+    
+    <p id="demo"></p>
+
+<hr>
+
+    <p id="demo1"> Esto es el texto de un p </p>
+    <button type="button" onclick="myFunction()">Clic para cambiar</button>
+<hr>
+<!-- ------------------------------------------------------------------- -->
+
+    <button onclick="writee()">document write</button>
+
+<!-- ------------------------------------------------------------------- -->    
+<hr>
+    <button type="button" onclick="alerta()">window alert</button>
+
+<!-- ------------------------------------------------------------------- -->
+<hr>
+    <button onclick="imprimir()">Imprime la página</button>
+
+<!-- ------------------------------------------------------------------- -->
+<hr> <!--  strings -->
+
+    <h2> strings </h2>
+    <form > <input type="text" id="input_string" placeholder=" Escriba una palabra"> </form>
+
+    <ul>
+        <li><button onclick="string_length()"> .length() </button></li>
+        <li><button onclick="string_slice()"> .slice(1, 4) </button> otras formas de extraer parte de una cadena: charAt(position) string[position] </li>
+        <li><button onclick="reemplazar()"> .replaceAll(valorAbuscar, valorNuevo) </button></li>
+    </ul> <br>
+
+    <form > <input type="text" id="text_1" placeholder=" Escriba una palabra">
+            <input type="text" id="text_2" placeholder=" Escriba una palabra"> 
+            <button onclick="concatenar()"> .concat() </button></form>
+<br>
+<!-- ------------------------------------------------------------------- -->	
+<hr>
+
+    <h2 >String methods  <button id="boton_table_strings" onclick="mostrar_ocultar('table_String_methods', 'boton_table_strings')"> Mostrar </button></h2>
+
+        <table id="table_String_methods" style="display: none;" >
+			<tbody><tr>
+			<th>Name</th>
+			<th>Description</th>
+			</tr>
+			<tr>
+			<td><a>charAt()</a></td>
+			<td>Returns the character at a specified index (position)</td>
+			</tr>
+			<tr>
+			<td><a>charCodeAt()</a></td>
+			<td>Returns the Unicode of the character at a specified index</td>
+			</tr>
+			<tr>
+			<td><a>concat()</a></td>
+			<td>Returns two or more joined strings</td>
+			</tr>
+			<tr>
+			<td><a>constructor</a></td>
+			<td>Returns the string's constructor function</td>
+			</tr>
+			<tr>
+			<td><a>endsWith()</a></td>
+			<td>Returns if a string ends with a specified value</td>
+			</tr>
+			<tr>
+			<td><a>fromCharCode()</a></td>
+			<td>Returns Unicode values as characters</td>
+			</tr>
+			<tr>
+			<td><a>includes()</a></td>
+			<td>Returns if a string contains a specified value</td>
+			</tr>
+			<tr>
+			<td><a>indexOf()</a></td>
+			<td>Returns the index (position) of the first occurrence of a value in a string</td>
+			</tr>
+			<tr>
+			<td><a>lastIndexOf()</a></td>
+			<td>Returns the index (position) of the last occurrence of a value in a string</td>
+			</tr>
+			<tr>
+			<td><a>length</a></td>
+			<td>Returns the length of a string</td>
+			</tr>
+			<tr>
+			<td><a>localeCompare()</a></td>
+			<td>Compares two strings in the current locale</td>
+			</tr>
+			<tr>
+			<td><a>match()</a></td>
+			<td>Searches a string for a value, or a regular expression, and returns the matches</td>
+			</tr>
+			<tr>
+			<td><a>prototype</a></td>
+			<td>Allows you to add properties and methods to an object</td>
+			</tr>
+			<tr>
+			<td><a>repeat()</a></td>
+			<td>Returns a new string with a number of copies of a string</td>
+			</tr>
+			<tr>
+			<td><a>replace()</a></td>
+			<td>Searches a string for a value, or a regular expression, and returns a string where the values are replaced</td>
+			</tr>
+			<tr>
+			<td><a>search()</a></td>
+			<td>Searches a string for a value, or regular expression, and returns the index (position) of the match</td>
+			</tr>
+			<tr>
+			<td><a>slice()</a></td>
+			<td>Extracts a part of a string and returns a new string</td>
+			</tr>
+			<tr>
+			<td><a>split()</a></td>
+			<td>Splits a string into an array of substrings</td>
+			</tr>
+			<tr>
+			<td><a>startsWith()</a></td>
+			<td>Checks whether a string begins with specified characters</td>
+			</tr>
+			<tr>
+			<td><a>substr()</a></td>
+			<td>Extracts a number of characters from a string, from a start index (position)</td>
+			</tr>
+			<tr>
+			<td><a>substring()</a></td>
+			<td>Extracts characters from a string, between two specified indices (positions)</td>
+			</tr>
+			<tr>
+			<td><a>toLocaleLowerCase()</a></td>
+			<td>Returns a string converted to lowercase letters, using the host's locale</td>
+			</tr>
+			<tr>
+			<td><a>toLocaleUpperCase()</a></td>
+			<td>Returns a string converted to uppercase letters, using the host's locale</td>
+			</tr>
+			<tr>
+			<td><a>toLowerCase()</a></td>
+			<td>Returns a string converted to lowercase letters</td>
+			</tr>
+			<tr>
+			<td><a>toString()</a></td>
+			<td>Returns a string or a string object as a string</td>
+			</tr>
+			<tr>
+			<td><a>toUpperCase()</a></td>
+			<td>Returns a string converted to uppercase letters</td>
+			</tr>
+			<tr>
+			<td><a>trim()</a></td>
+			<td>Returns a string with removed whitespaces</td>
+			</tr>
+			<tr>
+			<td><a>trimEnd()</a></td>
+			<td>Returns a string with removed whitespaces from the end</td>
+			</tr>
+			<tr>
+			<td><a>trimStart()</a></td>
+			<td>Returns a string with removed whitespaces from the start</td>
+			</tr>
+			<tr>
+			<td><a>valueOf()</a></td>
+			<td>Returns the primitive value of a string or a string object</td>
+			</tr>
+        </tbody></table>
+
+
+<!-- ------------------------------------------------------------------- -->
+<hr>
+
+	<h2 >Number methods  <button id="boton_table_numbers" onclick="mostrar_ocultar('table_number_methods','boton_table_numbers')"> Mostrar </button></h2>
+
+		<table id="table_number_methods" style="display: none;">
+			<tbody><tr>
+			  <th>Name</th>
+			  <th>Description</th>
+			</tr>
+			<tr>
+			  <td><a>constructor</a></td>
+			  <td>Returns the function that created JavaScript's Number prototype</td>
+			</tr>
+			<tr>
+			  <td><a>EPSILON</a></td>
+			  <td>Returns the difference between 1 and the smallest number</td>
+			</tr>
+			<tr>
+			  <td><a>isFinite()</a></td>
+			  <td>Checks whether a value is a finite number</td>
+			</tr>
+			<tr>
+			  <td><a>isInteger()</a></td>
+			  <td>Checks whether a value is an integer</td>
+			</tr>
+			<tr>
+			  <td><a>isNaN()</a></td>
+			  <td>Checks whether a value is Number.NaN</td>
+			</tr>
+			<tr>
+			  <td><a>isSafeInteger()</a></td>
+			  <td>Checks whether a value is a safe integer</td>
+			</tr>
+			<tr>
+			  <td><a>MAX_SAFE_INTEGER</a></td>
+			  <td>Returns the maximum safe integer in JavaScript.</td>
+			</tr>
+			<tr>
+			  <td><a>MIN_SAFE_INTEGER</a></td>
+			  <td>Returns the minimum safe integer in JavaScript.</td>
+			</tr>
+			<tr>
+			  <td><a>MAX_VALUE</a></td>
+			  <td>Returns the largest number possible in JavaScript</td>
+			</tr>
+			<tr>
+			  <td><a>MIN_VALUE</a></td>
+			  <td>Returns the smallest number possible in JavaScript</td>
+			</tr>
+			<tr>
+			  <td><a>NaN</a></td>
+			  <td>Represents a "Not-a-Number" value</td>
+			</tr>
+			<tr>
+			  <td><a>NEGATIVE_INFINITY</a></td>
+			  <td>Represents negative infinity (returned on overflow)</td>
+			  </tr>
+			<tr>
+			  <td><a>POSITIVE_INFINITY</a></td>
+			  <td>Represents infinity (returned on overflow)</td>
+			</tr>
+			<tr>
+			  <td><a>parseFloat()</a></td>
+			  <td>Parses a string an returns a number</td>
+			</tr>
+			<tr>
+			  <td><a>parseInt()</a></td>
+			  <td>Parses a string an returns a whole number</td>
+			</tr>
+			<tr>
+			  <td><a>prototype</a></td>
+			  <td>Allows you to add properties and methods to an object</td>
+			</tr>
+			<tr>
+			  <td><a>toExponential(x)</a></td>
+			  <td>Converts a number into an exponential notation</td>
+			</tr>
+			<tr>
+			  <td><a>toFixed(x)</a></td>
+			  <td>Formats a number with x numbers of digits after the decimal point</td>
+			</tr>
+			<tr>
+			  <td><a>toLocaleString()</a></td>
+			  <td>Converts a number into a string, based on the locale settings</td>
+			</tr>
+			<tr>
+			  <td><a>toPrecision(x)</a></td>
+			  <td>Formats a number to x length</td>
+			</tr>
+			<tr>
+			  <td><a>toString()</a></td>
+			  <td>Converts a number to a string</td>
+			</tr>
+			<tr>
+			  <td><a>valueOf()</a></td>
+			  <td>Returns the primitive value of a number</td>
+			</tr>
+		   </tbody></table>
+
+<!-- ------------------------------------------------------------------- -->	
+<hr>
+
+	<h2 >Arrays <button id="boton_arrays" onclick="mostrar_ocultar('lista_arrays','boton_arrays'), mostrar_ocultar('tabla_arrays','boton_arrays')" > Mostrar </button></h2>
+	
+		<ul id="lista_arrays" style="display: none;">
+						
+
+			<li> <b> let fruits = ["Banana", "Orange", "Apple", "Mango"];</b> </li>
+			<li> <b>fruits[2]</b> es igual a apple</li>
+			<li> <b>fruits.length</b> es igual a 3</li>
+
+			<li> <b>fruits[fruits.length] = "piña"</b> y <b> lista.push("piña")</b> agrega al final el elemento</li>
+			<li> <b>fruits.unshift("Lemon")</b> agrega al comienzo</li>
+			<li> <b>fruits.splice</b>(indice donde se van a agregar, elementos a eliminar, "elemento1", "elemento2", elementoETC) agrega elementos </li>
+
+			<li> <b>fruits.pop()</b> elimina el último elemento de la lista</li>
+			<li> <b>fruits.shift()</b> elimina el primer elemento</li>
+			<li> <b>fruits.splice</b>(indice desde donde se va a eliminar, elementos a eliminar) </li>
+
+			<li> <b>fruits.toString()</b> convierte la lista en string</li>
+			<li> <b>fruits.join(" * ")</b> convierte la lista en string los elementos quedan separados por " * "</li>
+
+			<li> <b>arr.sort()</b> ordena la lista alfabéticamente</li>
+			<li> <b>arr.sort(function(a, b){return a - b});</b> ordena numéricamente</li>
+			<li> <b>arr.sort(function(){return 0.5 - Math.random()})</b> ordena de forma aleatoria</li>
+			<li> <b>fruits.reverse()</b> da vuelta a la lista</li>
+
+
+			<li> fruits_2 = <b>fruits.slice(3)</b> parte la lista en el índice dado, fruits.slice(1,3) </li>
+
+			<li> array = <b>arr1.concat(arr2, arr3)</b> .concat concatena arrays</li>
+
+
+		</ul><br><br>
+
+		<table id="tabla_arrays" style="display: none;"> 
+		<tbody> *iteradores <br> <tr>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td><a>concat()</a></td>
+			<td>Joins arrays and returns an array with the joined arrays</td>
+		</tr>
+		<tr>
+			<td><a>constructor</a></td>
+			<td>Returns the function that created the Array object's prototype</td>
+		</tr>
+		<tr>
+			<td><a>copyWithin()</a></td>
+			<td>Copies array elements within the array, to and from specified positions</td>
+		</tr>
+		<tr>
+			<td><a>entries()***</a></td>
+			<td>Returns a key/value pair Array Iteration Object</td>
+			</tr>
+		<tr>
+			<td><a>every()***</a></td>
+			<td>Checks if every element in an array pass a test</td>
+			</tr>
+			<tr>
+			<td><a>fill()</a></td>
+			<td>Fill the elements in an array with a static value</td>
+			</tr>
+			<tr>
+			<td><a>filter()***</a></td>
+			<td>Creates a new array with every element in an array that pass a test</td>
+			</tr>
+			<tr>
+			<td><a>find()***</a></td>
+			<td>Returns the value of the first element in an array that pass a test</td>
+			</tr>
+			<tr>
+			<td><a>findIndex()***</a></td>
+			<td>Returns the index of the first element in an array that pass a test</td>
+			</tr>
+		<tr>
+			<td><a>forEach()***</a></td>
+			<td>Calls a function for each array element</td>
+			</tr>
+		<tr>
+			<td><a>from()***</a></td>
+			<td>Creates an array from an object</td>
+			</tr>
+		<tr>
+			<td><a>includes()***</a></td>
+			<td>Check if an array contains the specified element</td>
+			</tr>
+			<tr>
+			<td><a>indexOf()***</a></td>
+			<td>Search the array for an element and returns its position</td>
+			</tr>
+		<tr>
+			<td><a>isArray()</a></td>
+			<td>Checks whether an object is an array</td>
+			</tr>
+		<tr>
+			<td><a>join()</a></td>
+			<td>Joins all elements of an array into a string</td>
+			</tr>
+		<tr>
+			<td><a>keys()***</a></td>
+			<td>Returns a Array Iteration Object, containing the keys of the original array</td>
+			</tr>
+		<tr>
+			<td><a>lastIndexOf()***</a></td>
+			<td>Search the array for an element, starting at the end, and returns its position</td>
+			</tr>
+		<tr>
+			<td><a>length</a></td>
+			<td>Sets or returns the number of elements in an array</td>
+		</tr>
+			<tr>
+			<td><a>map()***</a></td>
+			<td>Creates a new array with the result of calling a function for each array element</td>
+			</tr>
+		<tr>
+			<td><a>pop()</a></td>
+			<td>Removes the last element of an array, and returns that element</td>
+			</tr>
+		<tr>
+			<td><a>prototype</a></td>
+			<td>Allows you to add properties and methods to an Array object</td>
+		</tr>
+		<tr>
+			<td><a>push()</a></td>
+			<td>Adds new elements to the end of an array, and returns the new length</td>
+			</tr>
+			<tr>
+			<td><a>reduce()***</a></td>
+			<td>Reduce the values of an array to a single value (going left-to-right)</td>
+			</tr>
+			<tr>
+			<td><a>reduceRight()***</a></td>
+			<td>Reduce the values of an array to a single value (going right-to-left)</td>
+			</tr>
+		<tr>
+			<td><a>reverse()</a></td>
+			<td>Reverses the order of the elements in an array</td>
+			</tr>
+		<tr>
+			<td><a>shift()</a></td>
+			<td>Removes the first element of an array, and returns that element</td>
+			</tr>
+		<tr>
+			<td><a>slice()</a></td>
+			<td>Selects a part of an array, and returns the new array</td>
+			</tr>
+		<tr>
+			<td><a>some()***</a></td>
+			<td>Checks if any of the elements in an array pass a test</td>
+			</tr>
+		<tr>
+			<td><a>sort()</a></td>
+			<td>Sorts the elements of an array</td>
+			</tr>
+		<tr>
+			<td><a>splice()</a></td>
+			<td>Adds/Removes elements from an array</td>
+			</tr>
+		<tr>
+			<td><a>toString()</a></td>
+			<td>Converts an array to a string, and returns the result</td>
+			</tr>
+		<tr>
+			<td><a>unshift()</a></td>
+			<td>Adds new elements to the beginning of an array, and returns the new length</td>
+			</tr>
+		<tr>
+			<td><a>valueOf()</a></td>
+			<td>Returns the primitive value of an array</td>
+			</tr>
+		</tbody></table>
+
+<!-- ------------------------------------------------------------------- -->	
+<hr>
+
+	<h2> loops <button id="boton_loops" onclick="mostrar_ocultar('tabla_loops','boton_loops')""> Mostrar </button></h2>
+	<table id="tabla_loops" style="display: none;">
+		<tr>
+			<th>for: </th>
+			<th> execute a block of code a number of times.</th>
+		</tr>
+		<tr>
+			<th>for in:</th>
+			<th> recorre cada clave del objeto (diccionario)</th>
+		</tr>
+		<tr>
+			<th>for in:</th>
+			<th> recorre cada clave del objeto (diccionario) o cada indice de una lista</th>
+		</tr>
+		<tr>
+			<th>for of:</th>
+			<th> recorre cada elemento de un iterable </th>
+		</tr>
+		<tr>
+			<th> while</th>
+			<th> Loops can execute a block of code as long as a specified condition is true. </th>
+		</tr>
+		<tr>
+			<th> do while</th>
+			<th> igual que while pero ejecuta el codígo por lo menos una vez antes de entrar al loop </th>
+		</tr>
+
+	</table>
+
+		
+<div style="height: 200px;"></div>
+<script src="scripts.js"></script>
+</body>
+</html>

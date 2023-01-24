@@ -1,0 +1,103 @@
+/* 
+NIVEL 01 mas específico
+- Estilos en línea (<p style="color:#fff;">)
+
+NIVEL 02
+- ID (#nombreId)
+
+NIVEL 03
+- Clases (.nombreClase)
+- Atributos y Pseudo - Clases (:first-child, :last-child :hover ...)
+
+NIVEL 04 menos específico
+- Elementos (a, p, ul ...)
+- Pseudo - Elementos (::after, ::before, ::first-letter ...) 
+
+*/
+
+/* se puede agregar directamente un estilo en la etiqueta
+<h5 style="color: blue;"> Texto de prueba </h5> */
+
+
+/* de esta forma se agregan los etilos en el head
+<style>
+        h4{ color: blue;}
+</style> */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background: gray;
+}
+
+
+
+/* de esta forma afecta a todos los h3 */
+h3 { 
+    color: darkred
+}
+
+/* el estilo se aploca a todos los elementos con la clase de nombre "default_clase" */
+.default_clase { 
+    color:blueviolet
+}
+
+
+.letra_size { 
+    color: #000; font-size: 40px;
+}
+
+/* se pueden elegir varios elementos separados por comas */
+.s1, .s2, .s3, .s4{ 
+    color: chartreuse; font-size: medium;
+}
+
+img { 
+    width: 500px; 
+    border-width: 1px; 
+    border-color: darkblue; 
+    /* se pueden aplicar varios estilos al mismo tiempo */
+    /* se aplican en sentindo de las manecillas del reloj */
+    border-style: double dashed outset solid;
+}
+
+.redondear_bordes { 
+    border-radius: 60%;
+}
+
+.container1{ 
+    background-color: darkgrey;
+            color: #000;
+}
+
+span {
+    font-weight: bold;
+    font-size:large;
+    }
+
+/* el # se usa para acceder a los id */
+#h3_black{
+    color: #000;
+}
+
+
+/* de esta forma se aplican stilos a los elementos con cierto atributo */
+input [type="checkbox"]{ color: blueviolet;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

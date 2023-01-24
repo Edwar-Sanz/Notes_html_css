@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- ------------------------------------------------------------------------------------- -->
+
+        <!-- img para agregar imagenes, src="ubicacion_imagen" 
+            alt="texto alternativo en caso de no estar la imagen"-->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/IconoCuadrado.svg"
+        alt="Un cuadrado">
+        
+<!-- ------------------------------------------------------------------------------------- -->
+
+        <!-- también se puede usar picture y source -->
+        <!-- el navegador elige el source -->
+        <picture>
+            <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
+            <source srcset="mdn-logo-wide.png" media="(min-width: 300px)">
+            <img src="mdn-logo-narrow.png" alt="MDN">
+        </picture>
+
+<!-- ------------------------------------------------------------------------------------- -->
+        <figure>
+            <img src="imagenes/piramide.png"
+                 alt="piramide">
+            <figcaption>una piramide</figcaption>
+        </figure>
+
+<!-- ------------------------------------------------------------------------------------- -->
+
+            
+            <!-- se anida un <a> y un <img> para poner un link en una imagen -->
+                <a href="https://es.wikipedia.org/wiki/Cuadrado" target="_blank"
+                rel="noopener noreferrer"> 
+                <img src="imagenes/cuadrado.png" alt="Cuadrado abcd"> </a>      
+
+<!-- ------------------------------------------------------------------------------------- -->
+        <img class="redondear_bordes" 
+        src="https://upload.wikimedia.org/wikipedia/commons/1/16/Square_on_hyperbolic_plane.png" 
+        alt="imagen">
+</body>
+</html>

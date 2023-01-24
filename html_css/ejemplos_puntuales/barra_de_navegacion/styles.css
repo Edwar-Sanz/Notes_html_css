@@ -1,0 +1,35 @@
+.nav {
+                background-color: aquamarine; 
+                list-style-type: none;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                margin-top: 20px;
+}
+  
+.nav_item{
+                display: inline-block;           
+}
+
+
+.nav_item a {
+                color: aliceblue;
+                padding: 10px;
+                text-decoration: none;
+                font-size: larger;
+                background-color: blue;
+                border-radius: 10px;
+}
+
+.nav_item a:hover {
+                color: black;
+}
+
+.nav_item a:active {
+    color: red;
+}
+
+
+/* .nav_item a::after {
+                content: "  |  ";
+} */
