@@ -64,19 +64,38 @@ function concatenar (
 //------------------------------------------------------------------------
 function mostrar_ocultar(iden, boton){
 
-    let tabla = document.getElementById(iden);
-    let estilo = window.getComputedStyle(tabla).display;
+    let elemento = document.getElementById(iden);
+    let estilo = window.getComputedStyle(elemento).display;
 
     if (estilo === "none") {     
-        tabla.style.display = "inline";
-        estilo = window.getComputedStyle(tabla).display;
+        elemento.style.display = "inline";
+        estilo = window.getComputedStyle(elemento).display;
         document.getElementById(boton).innerHTML = "Ocultar";
     }else{
-        tabla.style.display = "none";
-        estilo = window.getComputedStyle(tabla).display;
+        elemento.style.display = "none";
+        estilo = window.getComputedStyle(elemento).display;
         document.getElementById(boton).innerHTML = "Mostrar";
     }
 }
 
 //------------------------------------------------------------------------
+
+function fechas (fecha){
+
+    this.fecha = fecha;
+    this.toDateString = fecha.toDateString()
+    this.getFullYear = fecha.getFullYear()
+}
+
+let fecha = new Date();
+let dates = new fechas(fecha);
+//------------------------------------------------------------------------
+
+function aleatorio_entre(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+//------------------------------------------------------------------------
+
+
+
 
