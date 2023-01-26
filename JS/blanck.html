@@ -762,6 +762,43 @@
 <!-- ------------------------------------------------------------------- -->	
 <hr>
 
+	<h2> arrow functions <mark> let myFunction = (a, b) => a * b; </mark> </h2>
+	<h2> Operador condicional (ternario) <mark> condición ? expr1 : expr2; </mark> </h2>
+
+<!-- ------------------------------------------------------------------- -->	
+<hr>
+
+	<h2> Clases </h2>
+	<p> La clase persona recibe dos parametros</p>
+	<pre>
+		class Persona {
+			constructor(nombre, born_year) {
+			  this.nombre = nombre;
+			  this.born_year = born_year;
+			} 
+	</pre>
+			<p> el método edad resta el año actual con parámetro ingresado</p>
+			<pre>
+			edad() {
+			  let date = new Date();
+			  return date.getFullYear() - this.born_year;
+			}
+		  } 
+	</pre>
+	
+		<p> se crea la variable persona_jhon y con .edad() se accede al metodo </p>
+	<pre>
+		let persona_jhon = new Persona("Jhon", 2000);	  
+		persona_jhon.edad() 
+	</pre>
+
+
+
+
+
+
+
+
 
 
 <div style="height: 300px;"></div>

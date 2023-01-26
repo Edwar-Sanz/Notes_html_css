@@ -15,7 +15,7 @@ console.log("Esto es un console.log")
 function imprimir(){
     window.print();
     }
-
+{
 // ---------------------------------
 
 /* declarar variables
@@ -34,6 +34,7 @@ function imprimir(){
 // \'	'	
 // \"	"	
 // \\	\
+}
 //------------------------------------------------------------------------
 function string_length (text=document.getElementById("input_string").value){   
     let tex_length = text.length;
