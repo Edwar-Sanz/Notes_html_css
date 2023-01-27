@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> buscando elementos </h2>
+        <table>
+            <tr> <td> metodo    </td>   <td> descripcion </td> </tr>
+            <tr> <td> document.getElementById(id) </td>	<td>            Find an element by element id </td></tr>
+            <tr> <td> document.getElementsByTagName(name) </td>	<td>    Find elements by tag name     </td></tr>
+            <tr> <td> document.getElementsByClassName(name) </td>	<td>Find elements by class name   </td></tr>
+        </table>
+    <h2> cambiando elementos </h2>
+        <table>
+            <tr> <td> propiedad    </td><td> descripcion </td></tr>
+            <tr> <td> element.innerHTML =  new html content </td><td> Change the inner HTML of an element </td></tr>
+            <tr> <td> element.attribute = new value         </td><td>Change the attribute value of an HTML element</td></tr>
+            <tr> <td> element.style.property = new style    </td><td>Change the style of an HTML element</td></tr>
+            <tr> <td> metodo: element.setAttribute(attribute, value)  </td><td>Change the attribute value of an HTML element</td></tr>
+        </table>
+
+    <h2> agregando y borrando elementos</h2>
+        <button onclick="crear_div()" > clic para crear nuevo div </button>
+        <button onclick="delete_divs()" > clic para borrar </button>
+        
+        <div id="tablero" style="display:flex; 
+                                background-color: chartreuse; 
+                                width: 500px;
+                                height: 200px;">
+        </div>
+    	
+
+
+
+
+<div style="height: 300px;"></div>
+<script src="scripts.js"></script>
+</body>
+</html>
