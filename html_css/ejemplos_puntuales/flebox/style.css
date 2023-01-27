@@ -1,8 +1,36 @@
+*{ box-sizing: border-box;}
 
-
-.container { 
-    background-color: antiquewhite;
-    border: 3px solid black;   
+#no_flex { 
+    border: 1px solid black;
+    padding: 1%;
+    display:block;
+}
+#no_flex div {    
+    background-color: yellowgreen;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid black;
+    line-height: 3rem;
+    text-align: center;
 }
 
-.container div {width: 100px;}
+
+#flex { 
+    border: 1px solid black;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:stretch;
+    align-content:flex-start;
+}
+
+#flex div {    
+    background-color: yellowgreen;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid black;
+    line-height: 3rem;
+    text-align: center;
+}
+
+

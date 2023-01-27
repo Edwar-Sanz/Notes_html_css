@@ -30,8 +30,12 @@ body {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     background: gray;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    font-size: 62.5%;
 }
-
 
 
 /* de esta forma afecta a todos los h3 */
