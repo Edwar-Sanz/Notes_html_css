@@ -34,3 +34,16 @@ function delete_divs() {
     let drop_div = document.getElementById(id_div); // se crea la variable para div hijo tomando el id calculado en la variable anterior
     let drop_last = tablero.removeChild(drop_div); // se elimina el div hijo
 }
+
+function upperCase() {
+    const x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+  }
+
+function mOver(obj) {
+    obj.innerHTML = "Thank You"
+  }
+  
+function mOut(obj) {
+    obj.innerHTML = "Mouse Over Me"
+  }
