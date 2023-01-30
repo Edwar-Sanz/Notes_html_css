@@ -10,7 +10,21 @@ function alerta(){
 window.alert("Esto es un window.alert");
 }
 
-console.log("Esto es un console.log")
+function function_on_prompt() {
+    let text;
+    let person = prompt("Esto es un prompt", "escribe tu nombre");
+    if (person == null || person == "") {
+      text = "Escribe algo";
+    } 
+    else{
+      text = "Hello " + person + "! How are you today?";
+    }
+    document.getElementById("prompt").innerHTML = text;
+}
+
+
+
+console.log("Esto es un console.log");
 
 function imprimir(){
     window.print();
