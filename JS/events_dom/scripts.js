@@ -35,10 +35,6 @@ function delete_divs() {
     let drop_last = tablero.removeChild(drop_div); // se elimina el div hijo
 }
 
-function upperCase() {
-    const x = document.getElementById("fname");
-    x.value = x.value.toUpperCase();
-  }
 
 function mOver(obj) {
     obj.innerHTML = "Thank You"
@@ -47,3 +43,20 @@ function mOver(obj) {
 function mOut(obj) {
     obj.innerHTML = "Mouse Over Me"
   }
+
+function mDown(obj) {
+    obj.style.backgroundColor = "#1ec5e5";
+    obj.innerHTML = "Release Me";
+}
+function mUp(obj) {
+    obj.style.backgroundColor="blue";
+    obj.innerHTML="Thank You";
+}
+
+
+function upperCase() {
+    const x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+  }
+
+
