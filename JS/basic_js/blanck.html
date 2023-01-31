@@ -7,6 +7,7 @@
     <title>Document</title>
 	<style>
         table, th, td, tbody { border: 1px solid;}
+		pre {font-size:large;}
     </style>
     
   </head>
@@ -804,12 +805,60 @@
 		persona_jhon.edad() 
 	</pre>
 
+<!-- ------------------------------------------------------------------- -->	
+<hr>
 
+	<h2> Funciones </h2>
+	<p><pre>
+	let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+	sum_args(x);
+	sum_arguments(x);
+	<p> funciones que suman un numero indeterminado de datos</p>
 
+	<h4> ...args </h4>
+	function sum_args(...args) {
+		let sum = 0;
+		for (let arg of args) sum += arg;
+		return sum;
+	}
+	<h4> arguments </h4>
+	function sum_arguments() {
+		let sum = 0;
+		for (let i = 0; i < arguments.length; i++) {
+		  sum += arguments[i];
+		}
+		return sum;
+	  }
+	</pre></p>
 
+	<h3> llamar metodos en diferentes objetos: </h3>
+		<pre>
+			const persona1 = {
+				nombre: "Maria",
+				saludo (){ return `Mi nombre es ${ this.nombre }` },	// primer metodo
+				edad (born_year){ 					// segundo metodo
+					let date = new Date();
+					return date.getFullYear() - this.born_year; } 
+			};
 
+			const persona2 = {						// esta persona no tiene ninguno de los dos metodos
+				nombre: "Daniela"};
 
+			<table style="border: 0 ;"">
+				<tr><td> objeto1</td><td>metodo a llamar</td><td>metodo con que se va a llamar</td><td>objeto2</td></tr>
+				<tr><td> persona1</td><td>saludo</td><td>call</td><td>persona2</td></tr>
+			</table>
 
+			<p> diferencias entre call apply bind</p>
+			
+			persona1.edad.call(persona2, 1994);		//los argumentos en call se pasan separados por comas
+			persona1.edad.apply(persona2, [1994]);		// en apply los argumentos se pasan en un array
+
+			const edad = persona1.edad.bind(persona2);	// en bind se tiene que guardar el metodo en una variable 
+			edad(1994);					//y despues llamarlo
+		</pre>
+
+	<h2> Promise </h2>
 
 
 
