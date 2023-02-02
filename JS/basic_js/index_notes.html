@@ -327,7 +327,7 @@
 		</ul><br><br>
 
 		<table id="tabla_arrays" style="display: none;"> 
-		<tbody> *iteradores <br> <tr>
+		<tbody> <tr>
 			<th>Name</th>
 			<th>Description</th>
 		</tr>
@@ -344,45 +344,9 @@
 			<td>Copies array elements within the array, to and from specified positions</td>
 		</tr>
 		<tr>
-			<td>entries()***</td>
-			<td>Returns a key/value pair Array Iteration Object</td>
-			</tr>
-		<tr>
-			<td>every()***</td>
-			<td>Checks if every element in an array pass a test</td>
-			</tr>
-			<tr>
 			<td>fill()</td>
 			<td>Fill the elements in an array with a static value</td>
-			</tr>
-			<tr>
-			<td>filter()***</td>
-			<td>Creates a new array with every element in an array that pass a test</td>
-			</tr>
-			<tr>
-			<td>find()***</td>
-			<td>Returns the value of the first element in an array that pass a test</td>
-			</tr>
-			<tr>
-			<td>findIndex()***</td>
-			<td>Returns the index of the first element in an array that pass a test</td>
-			</tr>
-		<tr>
-			<td>forEach()***</td>
-			<td>Calls a function for each array element</td>
-			</tr>
-		<tr>
-			<td>from()***</td>
-			<td>Creates an array from an object</td>
-			</tr>
-		<tr>
-			<td>includes()***</td>
-			<td>Check if an array contains the specified element</td>
-			</tr>
-			<tr>
-			<td>indexOf()***</td>
-			<td>Search the array for an element and returns its position</td>
-			</tr>
+		</tr>
 		<tr>
 			<td>isArray()</td>
 			<td>Checks whether an object is an array</td>
@@ -392,21 +356,9 @@
 			<td>Joins all elements of an array into a string</td>
 			</tr>
 		<tr>
-			<td>keys()***</td>
-			<td>Returns a Array Iteration Object, containing the keys of the original array</td>
-			</tr>
-		<tr>
-			<td>lastIndexOf()***</td>
-			<td>Search the array for an element, starting at the end, and returns its position</td>
-			</tr>
-		<tr>
 			<td>length</td>
 			<td>Sets or returns the number of elements in an array</td>
 		</tr>
-			<tr>
-			<td>map()***</td>
-			<td>Creates a new array with the result of calling a function for each array element</td>
-			</tr>
 		<tr>
 			<td>pop()</td>
 			<td>Removes the last element of an array, and returns that element</td>
@@ -419,14 +371,6 @@
 			<td>push()</td>
 			<td>Adds new elements to the end of an array, and returns the new length</td>
 			</tr>
-			<tr>
-			<td>reduce()***</td>
-			<td>Reduce the values of an array to a single value (going left-to-right)</td>
-			</tr>
-			<tr>
-			<td>reduceRight()***</td>
-			<td>Reduce the values of an array to a single value (going right-to-left)</td>
-			</tr>
 		<tr>
 			<td>reverse()</td>
 			<td>Reverses the order of the elements in an array</td>
@@ -438,10 +382,6 @@
 		<tr>
 			<td>slice()</td>
 			<td>Selects a part of an array, and returns the new array</td>
-			</tr>
-		<tr>
-			<td>some()***</td>
-			<td>Checks if any of the elements in an array pass a test</td>
 			</tr>
 		<tr>
 			<td>sort()</td>
@@ -468,23 +408,34 @@
 <!-- ------------------------------------------------------------------- -->	
 <hr>
 
-	<h2> loops <button id="boton_loops" onclick="mostrar_ocultar('tabla_loops','boton_loops')""> Mostrar </button></h2>
-	<table id="tabla_loops" style="display: none;">
+	<h2> loops iteradores <button id="boton_loops" onclick="mostrar_ocultar('tabla_loops','boton_loops')""> Mostrar </button></h2>
+	<table id="tabla_loops" style="display: none; border: 0px; text-align: left;">
 		<tr>
 			<th>for: </th>
 			<th> execute a block of code a number of times.</th>
+			<th><pre> for (let index=0; index < someArray.length; index++) {
+				const elem = someArray[index]; </pre></th>
 		</tr>
 		<tr>
 			<th>for in:</th>
 			<th> recorre cada clave del objeto (diccionario)</th>
+			<th> <pre>for (const key in someArray) {
+				console.log(key);
+			  }</pre></th>
 		</tr>
 		<tr>
-			<th>for in:</th>
+			<th>for each:</th>
 			<th> recorre cada clave del objeto (diccionario) o cada indice de una lista</th>
+			<th><pre> someArray.forEach((elem, index) => {
+				console.log(elem, index);
+			  });</pre></th>
 		</tr>
 		<tr>
 			<th>for of:</th>
 			<th> recorre cada elemento de un iterable </th>
+			<th><pre> for (const elem of someArray) {
+				console.log(elem);
+			  }</pre></th>
 		</tr>
 		<tr>
 			<th> while</th>
@@ -493,6 +444,78 @@
 		<tr>
 			<th> do while</th>
 			<th> igual que while pero ejecuta el codígo por lo menos una vez antes de entrar al loop </th>
+		</tr>
+		<tr>
+			<th>entries()</th>
+			<th>retorna cada clave valor del objeto en un array dentro de otro array </th>
+			<th> Object.entries(my_object) 
+				[[k,v][k,v][k,v]]
+			</th>
+		</tr>
+		<tr>
+			<th>every()</th>
+			<th>retorna falso o verdadero si el array comple las condiciones</th>
+			<th><pre>	
+const test = (currentValue) => currentValue < 40;
+const arr = [1, 30, 39, 29, 10, 13];
+				
+console.log(arr.every(test));
+// true</pre></th>
+		</tr>
+		<tr>
+			<th>filter</th>
+			<th>crear un array con los elementos que cumplen las condiciones</th>
+			<th><pre>	
+const test = (currentValue) => currentValue <= 13;
+const arr = [1, 30, 39, 29, 10, 13];
+				
+console.log(arr.every(test));
+// [1,10,13]
+			</pre></th>
+		</tr>
+		<tr>
+			<th>find()</th>
+			<th>Returns the value of the first element in an array that pass a test</th>
+		</tr>
+		<tr>
+			<th>findIndex()</th>
+			<th>Returns the index of the first element in an array that pass a test</th>
+		</tr>
+		<tr>
+			<th>from()</th>
+			<th>Creates an array from an object</th>
+		</tr>
+		<tr>
+			<th>includes()</th>
+			<th>Check if an array contains the specified element</th>
+		</tr>
+		<tr>
+			<th>indexOf()</th>
+			<th>Search the array for an element and returns its position</th>
+		</tr>
+		<tr>
+			<th>keys()</th>
+			<th>Returns a Array Iteration Object, containing the keys of the original array</th>
+		</tr>
+		<tr>
+			<th>lastIndexOf()</th>
+			<th>Search the array for an element, starting at the end, and returns its position</th>
+		</tr>
+		<tr>
+			<th>map()</th>
+			<th>Creates a new array with the result of calling a function for each array element</th>
+		</tr>
+		<tr>
+			<th>reduce()</th>
+			<th>Reduce the values of an array to a single value (going left-to-right)</th>
+		</tr>
+		<tr>
+			<th>reduceRight()</th>
+			<th>Reduce the values of an array to a single value (going right-to-left)</th>
+		</tr>
+		<tr>
+			<th>some()</th>
+			<th>Checks if any of the elements in an array pass a test</th>
 		</tr>
 
 	</table>
@@ -857,8 +880,6 @@
 			const edad = persona1.edad.bind(persona2);	// en bind se tiene que guardar el metodo en una variable 
 			edad(1994);					//y despues llamarlo
 		</pre>
-
-	<h2> Promise </h2>
 
 
 
