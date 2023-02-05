@@ -23981,25 +23981,48 @@ const z_aux = [];
 define_xyz(data);
 const z_values = chunckArrayInGroups(z_aux, 31);
 
+
+// plot data
 const data_plot= [{
     x: y_values,
     y: x_values,
     z: z_values,
     type: 'heatmap',
     showscale: false,
-    colorscale: [[0, 'rgb(252,0,0)'], [0.25, 'rgb(252,126,0)'], [0.5, 'rgb(252,252,0)'], [0.75, 'rgb(126,252,0)'],[1, 'rgb(0,252,0)']]
-  }];
-  
-  var layout = {
+    colorscale: [[0, 'rgb(252,0,0)'], [0.25, 'rgb(252,126,0)'], 
+                [0.5, 'rgb(252,252,0)'], [0.75, 'rgb(126,252,0)'],[1, 'rgb(0,252,0)']],
+    xgap :	2,
+    ygap :	2
+}];
+
+// opciones
+let layout = {
     title: 'Heatmap',
-    annotations: [],
-    xaxis: {
-      ticks: '',
-      side: 'top'
-    },
-    yaxis: {
-      ticks: '',
-      side: 'top'
-    }
+    font: {size: 14}
   };
-Plotly.newPlot("div_plot", data_plot, layout);
+
+let config = {responsive: true}
+Plotly.newPlot("div_plot_heatmap", data_plot, layout, config);
+
+
+//---
+
+const cycle_of_year = [{"x": [], "y": [] }];
+for (let i = 0; i < 12; i++) {
+    let arr = z_values[i];
+    let sum = 0;
+    sum = arr.reduce((previous, current) => current += previous);
+    arr = sum / arr.length;
+    cycle_of_year[0]["x"].push(x_values[i]);
+    cycle_of_year[0]["y"].push(arr);
+}
+
+let layout_line_plot = { 
+    title: 'Ciclos',
+    font: {size: 18}
+  };
+  
+let config_line_plot = {responsive: true}
+
+
+Plotly.newPlot('div_plot_line', cycle_of_year, layout_line_plot, config_line_plot);
