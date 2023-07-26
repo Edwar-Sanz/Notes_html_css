@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  <!-- el ancho de la pantalla se divide en 12 espacios -->
+  
+  <!--  -->
+  <div class="container">
+    <!-- 
+      en bootstrap los estilos de manejan con clases, por ejemplo:
+      row - son las filas 
+      col - indica que es una columna, en este caso de forma 
+        automática, toma 6 espacios para cada columna
+    -->
+    <div class="row">
+      <div class="col border border-primary">hola</div>
+      <div class="col border border-primary">mundo</div>
+    </div>
+    <!-- ----------------------------------------------------- -->
+
+    <!-- 
+      Breakpoint	Class	Dimensions
+      X-Small	    None	<576px
+      Small	      sm	  ≥576px
+      Medium	    md	  ≥768px
+      Large	      lg	  ≥992px
+      Exlarge	    xl	  ≥1200px
+      Exexlarge	  xxl	  ≥1400px
+    -->
+    <!--
+      col-sm-6 indica que las columnas van a ocupar
+      6 espacios mientras el ancho sea mayor a ≥576px
+    -->
+    <div class="row">
+      <div class="col-sm-6 border border-primary">col-sm-6</div>
+      <div class="col-sm-6 border border-primary">col-sm-6</div>
+    </div>
+    <!-- ----------------------------------------------------- -->
+    <div class="row">
+      <div class="col-sm-4 border border-primary">.col-sm-4</div>
+      <div class="col-sm-8 border border-primary">.col-sm-8</div>
+    </div>
+    <!-- ----------------------------------------------------- -->
+    <!--  
+      m - hace referencia a margen
+      t - se refiere a top
+      mt-1 significa margin top de 1
+    -->
+    <div class="row mt-1">
+      <div class="col-md-6 border border-primary">c</div>
+      <div class="col-md-6 border border-primary">
+        <div class="row">
+          <div class="col">d</div>
+          <div class="col border-start border-primary">e</div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------------------------------------------- -->
+    <div class="container mt-3 border border-primary">
+      <p>Display headings are used to stand out more than normal headings (larger font-size and lighter font-weight):
+        The small element (and the .small class) is used to create a smaller, secondary text in any heading:
+      </p>
+      <h1>Display Headings
+        <small>secondary text</small>
+      </h1>
+      <h1 class="display-1">Display 1
+      </h1>
+    </div>
+    <!-- ----------------------------------------------------- -->
+    <div class="container mt-3 border border-primary">
+      <h1>Description Lists</h1>    
+      <p>The dl element indicates a description list:</p>
+      <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+      </dl>     
+    </div>
+    <!-- ----------------------------------------------------- -->
+    <!-- centrado de texto -->
+    <div class="container mt-3">
+      <h2>Typography</h2>
+      <p class="text-start border border-primary">Left-aligned text.</p>
+      <p class="text-end border border-primary" >Right-aligned text.</p>      
+      <p class="text-center border border-primary">Center-aligned text.</p>
+      <p class="text-nowrap border border-primary">No wrap text. No wrap text. No wrap text. No wrap text.</p>
+    </div>
+
+    <!-- ----------------------------------------------------- -->
+    <!-- colores 
+      .text-muted, .text-primary, .text-success, .text-info, 
+      .text-warning, .text-danger, .text-secondary, .text-white, 
+      .text-dark, .text-body (default body color/often black) 
+      and .text-light
+    -->
+    <p class="text-primary">This text is important.</p>
+    <!-- Background Colors 
+      .bg-primary, .bg-success, .bg-info, .bg-warning, 
+      .bg-danger, .bg-secondary, .bg-dark and .bg-light
+    -->
+    <p class="bg-primary">This text is important.</p>
+
+    <!-- bg y color -->
+    <p class="text-bg-primary">This text is important.</p>
+
+
+
+
+    
+  </div>
+</body>
+</html>
